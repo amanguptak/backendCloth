@@ -19,7 +19,7 @@ class ApiFeatures{
     }
     filter(){
         const queryCopy = {...this.queryString}
-       console.log("not updated",queryCopy)
+    //    console.log("not updated",queryCopy)
         const removeFields=["keyword", "page","limit"]
         removeFields.forEach((key)=> delete queryCopy[key])
 
