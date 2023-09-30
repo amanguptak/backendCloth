@@ -9,10 +9,10 @@ const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-app.use(cors({
-    origin:"http://localhost:8080",
-    credentials:true,
-}))
+// app.use(cors({
+//     origin:"http://localhost:8080",
+//     credentials:true,
+// }))
 app.use(express.json())
 app.use(cookieParser())
 app.use(bodyParser.json())
