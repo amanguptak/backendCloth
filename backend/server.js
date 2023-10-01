@@ -19,13 +19,13 @@ dotenv.config({path:"backend/config/config.env"})
 connectDB()
 
 
-app.use((req,res,next)=>{
-  res.setHeader('Access-Control-Allow-Origin','http://localhost:8080')
-  res.setHeader('Access-Control-Allow-Methods'
-  ,'GET, POST, PUT,DELETE ');
-  res.setHeader('Access-Control-Allow-Methods','Content-Type')
-  next();
-})
+// app.use((req,res,next)=>{
+//   res.setHeader('Access-Control-Allow-Origin','http://localhost:8080')
+//   res.setHeader('Access-Control-Allow-Methods'
+//   ,'GET, POST, PUT,DELETE ');
+//   res.setHeader('Access-Control-Allow-Methods','Content-Type')
+//   next();
+// })
 app.listen(process.env.PORT,()=>{
     console.log(`server listening on ${process.env.PORT}`)
 })
