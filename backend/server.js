@@ -19,7 +19,12 @@ dotenv.config({path:"backend/config/config.env"})
 connectDB()
 
 
-
+app.use((req,res,next)=>{
+  res.setHeader('Access-Control-Allow-Origin','*')
+  res.header('Access-Control-Allow-Headers'
+  ,'Origin, X-Requested-With,Content-Type, Accept');
+  next();
+})
 app.listen(process.env.PORT,()=>{
     console.log(`server listening on ${process.env.PORT}`)
 })
