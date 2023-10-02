@@ -9,7 +9,7 @@ const sendToken = (user,statusCode,res)=>{
         ),
         httpOnly: true,
         sameSite: 'None',
-        // domain:'https://uchiha-bg4ffoid2-imamangupta600-gmailcom.vercel.app',
+        domain:process.env.FRONT_URL
        
     }
     res.status(statusCode).cookie("token",token,options ).json({

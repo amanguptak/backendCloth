@@ -10,7 +10,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 app.use(cors({
-    origin:"http://localhost:8080",
+    origin:process.env.FRONT_URL,
     credentials:true,
 }))
 app.use(express.json())
