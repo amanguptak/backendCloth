@@ -10,7 +10,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 app.use(cors({
-    origin:'https://uchiha-bg4ffoid2-imamangupta600-gmailcom.vercel.app',
+    origin:"http://localhost:8080",
     credentials:true,
 }))
 app.use(express.json())
