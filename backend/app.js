@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-app.use(cookieParser())
+
 app.use(cors({
     origin:'https://animeuchiha-da53ppzam-imamangupta600-gmailcom.vercel.app',
     credentials:true,
@@ -18,6 +18,7 @@ app.use(express.json())
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
+app.use(cookieParser())
 
 app.use("/api",products)
 app.use("/api",user)
